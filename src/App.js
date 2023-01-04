@@ -17,7 +17,7 @@ function App() {
         <nav className="flex flex-row gap-5 justify-between">
           <p className="font-semibold text-2xl py-2 px-1">Hotel</p>
           <BsFillMoonStarsFill size={30} onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl pt-2" />
-          <Link to="order" smooth duration={500} className=" cursor-pointer py-3 px-6 bg-gradient-to-r from-teal-500 to-blue-500 rounded-md font-semibold">Order Here</Link>
+          <Link to="order" smooth duration={600} className=" cursor-pointer py-3 px-6 bg-gradient-to-r from-teal-500 to-blue-500 rounded-md font-semibold">Order Here</Link>
         </nav>
         <div className="h-screen grid place-items-center">
           <div>
@@ -76,13 +76,37 @@ function App() {
             <div className="flex justify-center items-center">
                 <form action="https://getform.io/f/94770f33-2cf2-411e-8c9f-bd1a03122049" method= "POST" className="flex flex-col w-full md:w-1/2">
                     <input type="text" name="name" placeholder="Enter Your Name" className="p-2 bg-transparent border-2 rounded-md
-                    text-gray-700 focus:outline-none"/>
+                    text-gray-700 focus:outline-none" required/>
                     <input type="phone" name="phone" placeholder="Enter Your Phone" className="p-2 bg-transparent border-2 rounded-md
-                    text-gray-700 focus:outline-none my-4"/>
-                    <input type="text" name="order" placeholder="Your Order" className="p-2 bg-transparent border-2 rounded-md
-                    text-gray-700 focus:outline-none my-4"/>
-                    <input type="text" name="quantity" placeholder="Your Order" className="p-2 bg-transparent border-2 rounded-md
-                    text-gray-700 focus:outline-none my-4"/>
+                    text-gray-700 focus:outline-none my-4" required/>
+                    <select type="select" name="main_course" placeholder="Your Order" className="p-2 bg-transparent border-2 rounded-md
+                    text-gray-700 focus:outline-none my-4">
+                        <option>Main Courses</option>
+                       {
+                          Courses.map(({id,title}) =>(
+                            <option key={id} className="capitalize">{title}</option>
+                            ))
+                        }
+                    </select>
+                    <select type="select" name="main_course" placeholder="Drinks and Beverages" className="p-2 bg-transparent border-2 rounded-md
+                    text-gray-700 focus:outline-none my-4">
+                        <option>Drinks and Beverages</option>
+
+                       {
+                          Drinks.map(({id,title}) =>(
+                            <option key={id} className="capitalize">{title}</option>
+                            ))
+                        }
+                    </select>
+                    <select type="select" name="main_course" placeholder="Snacks and Starters" className="p-2 bg-transparent border-2 rounded-md
+                    text-gray-700 focus:outline-none my-4">
+                      <option>Snacks and Starters</option>
+                       {
+                          Snacks.map(({id,title}) =>(
+                            <option key={id} className="capitalize">{title}</option>
+                            ))
+                        }
+                    </select>
                     <textarea name="message" rows="5"placeholder="Any additional information" className="p-2 bg-transparent border-2 rounded-md focus:outlined-none"/>
                     <button className="text-white bg-gradient-to-b from-cyan-500 to-teal-500 px-6 py-3 my-8 mx-auto
                     flex items-center rounded-md hover:scale-110 duration-300">Proceed to Checkout</button>
