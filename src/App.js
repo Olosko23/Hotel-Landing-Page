@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import one from './assets/1.jpg';
 import three from './assets/3.jpg';
 import ten from './assets/10.jpg';
-import { BsFillMoonStarsFill } from 'react-icons/bs';
+import { BsFillMoonStarsFill,BsSun } from 'react-icons/bs';
 import {Drinks,Testimonials,Snacks, Courses} from './Data';
 import {Link} from 'react-scroll';
 
 function App() {
+  const [icon, setIcon] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
 
   
@@ -16,7 +17,14 @@ function App() {
         <section className="pt-5">
         <nav className="flex flex-row gap-5 justify-between">
           <p className="font-semibold text-2xl py-2 px-1">Hotel</p>
-          <BsFillMoonStarsFill size={30} onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl pt-2" />
+          <div onClick={()=> setIcon(!icon)}>
+
+          {
+            icon ? <BsSun size={35} onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl pt-2" />
+            : <BsFillMoonStarsFill size={30} onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl pt-2" />
+          }
+          
+          </div>
           <Link to="order" smooth duration={600} className=" cursor-pointer py-3 px-6 bg-gradient-to-r from-teal-500 to-blue-500 rounded-md font-semibold">Order Here</Link>
         </nav>
         <div className="h-screen grid place-items-center">
@@ -132,8 +140,8 @@ function App() {
       </section>
       <section className="grid place-items-center">
         <div className="py-5 flex flex-row gap-4">
-          <h5 className="font-semibold">Hotel@2023</h5>
-          <p className="font-medium hidden md:flex">Developed by Olosko using React and Tailwind CSS</p>
+          <h5 className="font-semibold">Hotel &copy; 2023</h5>
+          <p className="font-medium hidden md:flex">Developed using React and Tailwind CSS</p>
         </div>
       </section>
       </main>
