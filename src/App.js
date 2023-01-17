@@ -281,7 +281,7 @@ function App() {
                 size={25}
               />
             </a>
-            <a href="https://twitter.com/home" target="_blank" rel="noreferrer">
+            <a href="https://twitter.com" target="_blank" rel="noreferrer">
               <AiOutlineTwitter
                 className="hover:scale-105 cursor-pointer"
                 size={25}
