@@ -3,6 +3,7 @@ import one from "./assets/1.jpg";
 import three from "./assets/3.jpg";
 import ten from "./assets/10.jpg";
 import { BsFillMoonStarsFill, BsSun } from "react-icons/bs";
+import { AiOutlineArrowUp } from "react-icons/ai";
 import { Drinks, Testimonials, Snacks, Courses } from "./Data";
 import { Link } from "react-scroll";
 
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <div className={darkMode ? "dark" : ""}>
-      <main className="h-full w-full gap-4 flex flex-col bg-[#FEFBF3] dark:bg-[#47869b]">
+      <main className="h-full w-full gap-2 flex flex-col bg-[#FEFBF3] dark:bg-[#47869b]">
         <section name="top" className="text-gray-100">
           <nav className="flex flex-row justify-between fixed w-full py-3 px-5 bg-[#97afb9] dark:bg-[#3c7183]">
             <Link to="top" smooth duration={700}>
@@ -132,7 +133,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section name="order" className="px-8 w-full pb-5">
+        <section name="order" className="px-8 w-full pb-2">
           <div className="flex flex-col p-4 justify-center max-w-screen-lg mt-12 mx-auto h-full shadow-lg rounded-xl">
             <div className="pb-8 flex flex-row justify-center">
               <p className="py-4 text-3xl sm:text-4xl font-medium">
@@ -225,7 +226,7 @@ function App() {
             Testimonials
           </h3>
           <div className="grid place-content-center place-items-center">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 py-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 py-5">
               {Testimonials.map(({ id, title, opinion, rating }) => (
                 <div
                   key={id}
@@ -243,6 +244,19 @@ function App() {
             </div>
           </div>
         </section>
+        <Link
+          to="top"
+          smooth
+          duration={800}
+          className="grid place-items-center"
+        >
+          <button className="flex gap-2 border-2 rounded-2xl shadow-xl py-2 px-4 text-white bg-gradient-to-b from-cyan-500 to-teal-500">
+            Back to Top{" "}
+            <span>
+              <AiOutlineArrowUp size={25} />
+            </span>
+          </button>
+        </Link>
         <section className="grid place-items-center">
           <div className="py-5 flex flex-row gap-4">
             <h5 className="font-semibold">Hotel &copy; 2023</h5>
