@@ -51,8 +51,8 @@ function App() {
               Order Here
             </Link>
           </nav>
-          <div className="h-[500px] grid place-items-center bg-[url('./assets/Fish.JPG')] bg-cover">
-            <div className="mt-28 px-2">
+          <div className="h-[600px] grid place-items-center bg-[url('./assets/Fish.JPG')] bg-cover">
+            <div className="px-2 mt-40">
               <h3 className="text-gray-300 font-medium text-3xl mb-4 md:text-6xl">
                 Ka Mwalimu
               </h3>
@@ -256,7 +256,7 @@ function App() {
           </p>
           <div className="flex gap-10">
             <a
-              href="https://api.whatsapp.com/send/?phone=254799590711&text&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=254746037441&text&type=phone_number&app_absent=0"
               target="_blank"
               rel="noreferrer"
             >
@@ -265,7 +265,7 @@ function App() {
                 size={25}
               />
             </a>
-            <a href="tel:+254799590711" target="_self">
+            <a href="tel:+254746037441" target="_self">
               <AiOutlinePhone
                 className="hover:scale-105 cursor-pointer"
                 size={25}
@@ -295,7 +295,7 @@ function App() {
           duration={800}
           className="grid place-items-center"
         >
-          <button className="group flex gap-2 border-2 rounded-2xl shadow-xl py-2 px-4 text-white bg-gradient-to-b from-cyan-500 to-teal-500">
+          <button className="group flex gap-2 rounded-2xl shadow-xl py-2 px-4 text-white bg-gradient-to-b from-cyan-500 to-teal-500">
             Back to Top{" "}
             <span>
               <AiOutlineArrowRight
