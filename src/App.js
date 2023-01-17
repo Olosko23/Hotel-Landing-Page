@@ -3,7 +3,13 @@ import one from "./assets/1.jpg";
 import three from "./assets/3.jpg";
 import ten from "./assets/10.jpg";
 import { BsFillMoonStarsFill, BsSun } from "react-icons/bs";
-import { AiOutlineArrowUp } from "react-icons/ai";
+import {
+  AiOutlineArrowRight,
+  AiOutlineMail,
+  AiOutlinePhone,
+  AiOutlineTwitter,
+  AiOutlineWhatsApp,
+} from "react-icons/ai";
 import { Drinks, Testimonials, Snacks, Courses } from "./Data";
 import { Link } from "react-scroll";
 
@@ -244,16 +250,58 @@ function App() {
             </div>
           </div>
         </section>
+        <section className="grid place-items-center px-5 py-5">
+          <p className="py-3 capitalize text-2xl font-semibold">
+            Click to get in touch
+          </p>
+          <div className="flex gap-10">
+            <a
+              href="https://api.whatsapp.com/send/?phone=254799590711&text&type=phone_number&app_absent=0"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <AiOutlineWhatsApp
+                className="hover:scale-105 cursor-pointer"
+                size={25}
+              />
+            </a>
+            <a href="tel:+254799590711" target="_self">
+              <AiOutlinePhone
+                className="hover:scale-105 cursor-pointer"
+                size={25}
+              />
+            </a>
+            <a
+              href="mailto:oloogeorge633@gmail.com?"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <AiOutlineMail
+                className="hover:scale-105 cursor-pointer"
+                size={25}
+              />
+            </a>
+            <a href="https://twitter.com/home" target="_blank" rel="noreferrer">
+              <AiOutlineTwitter
+                className="hover:scale-105 cursor-pointer"
+                size={25}
+              />
+            </a>
+          </div>
+        </section>
         <Link
           to="top"
           smooth
           duration={800}
           className="grid place-items-center"
         >
-          <button className="flex gap-2 border-2 rounded-2xl shadow-xl py-2 px-4 text-white bg-gradient-to-b from-cyan-500 to-teal-500">
+          <button className="group flex gap-2 border-2 rounded-2xl shadow-xl py-2 px-4 text-white bg-gradient-to-b from-cyan-500 to-teal-500">
             Back to Top{" "}
             <span>
-              <AiOutlineArrowUp size={25} />
+              <AiOutlineArrowRight
+                className="group-hover:-rotate-90 duration-300"
+                size={25}
+              />
             </span>
           </button>
         </Link>
